@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+       
+
+
+
+
+
+        <script type="text/JavaScript">
+        
+           const student={
+
+            name: "tom cruice",
+            qual : "Btech",
+            sum: function () {
+                console.log(this.name);
+              var add=2+2;
+              console.log("sum of two nos  "+add);
+              console.log(this);
+              //console.log(this.name); // we can use "use strict mode here"
+             
+
+             function child() {
+
+                 var name="tom"
+                 console.log("child metod name:"+name);
+                 console.log(this);
+                 
+             }
+
+             child()
+
+            }
+
+        }
+        student.sum()
+          
+        
+        
+        </script>
+    </body>
+</html>

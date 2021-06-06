@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        
+
+
+
+
+        <script type="text/JavaScript">
+        
+        // var a= "hello guys";
+
+        // function first() {
+        //     var b= "how are you?"
+        //     second()
+
+        //     function second() {
+        //         var c = "Myself tom"
+        //         console.log(a+b+c);
+        //         
+                
+        //     }
+            
+        // }
+        
+        // first()
+
+
+
+        var a= "hello guys";
+
+        function first() {
+            var b= "how are you?"
+            console.log(c); // parent cannot access inner variable
+            second()
+
+            function second() {
+                var c = "Myself tom"
+                console.log(a+b+c);
+                three()
+                
+            }
+            
+        }
+        // function three() {
+        //     var d="Please share and subcribe"
+        //     console.log(a+b+c+d); // we will get error
+
+        function three() {
+            var d="Please share and subcribe"
+            console.log(a+d); 
+            
+            
+        }
+        
+        first()
+        </script>
+    </body>
+</html>

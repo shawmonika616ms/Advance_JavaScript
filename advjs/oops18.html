@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        
+
+
+
+
+
+        <script type="text/JavaScript">
+        
+         
+        //  class Students{
+
+        //      biodata(){
+        //          console.log("Hi class Method");
+        //      }
+
+        //  }
+
+        // let obj1= new Students();
+        // obj1.biodata()
+
+
+
+        //  class Students{
+        //      constructor(name,age,cls){
+        //          this.myname=name;
+        //          this.myage=age;
+        //          this.mycls=cls;
+
+
+        //      }
+
+        //      biodata(){
+        //          console.log(`Hi my name is ${this.myname}. I am ${this.myage}. I am in class ${this.mycls}`);
+        //      }
+
+        //  }
+
+        // let obj1= new Students('Tom',20,'Six');
+        // let obj2= new Students('mary',21,'nine');
+        // let obj3= new Students('taylor',22,'Seven');
+        // obj1.biodata()
+        // obj2.biodata()
+        // obj3.biodata()
+
+
+
+        class Students{
+             constructor(name,age,cls){
+                 this.myname=name;
+                 this.myage=age;
+                 this.mycls=cls;
+              }
+            // if we write static  then  other class or objects can not inherit it
+             biodata(){   //instance method
+                 return `Hi my name is ${this.myname}. I am ${this.myage}. I am in class ${this.mycls}`;
+             }
+
+         }
+
+         class Player extends Students{
+             constructor(name,age,cls,game){
+                 super(name,age,cls);
+                 this.mygame=game;
+
+             }
+
+             play_biodata(){
+                 return `${super.biodata()}I m player of ${this.mygame}`;
+             }
+            //  biodata(){
+            //     console.log(`Hi my name is ${this.myname}. I am ${this.myage}. 
+            //     I am in class ${this.mycls} I like to play ${this.mygame}`);
+            //  }
+
+
+         }
+
+        let obj1= new Player('Tom',20,'Six','Cricket');
+       // let obj2= new Player('mary',21,'nine','hockey');
+        //let obj3= new Player('taylor',22,'Seven',"football");
+        console.log( obj1.play_biodata());
+        //obj2.biodata()
+        //obj3.biodata()
+
+        
+        </script>
+    </body>
+</html>

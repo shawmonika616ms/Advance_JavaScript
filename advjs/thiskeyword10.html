@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        
+
+
+
+
+
+        <script type="text/JavaScript">
+        
+       // console.log(this);// it refers to window object
+
+
+        // function sum() {
+
+        //     var add=2+2;
+        //     console.log("sum of two nos  "+add);
+        //     console.log(this);
+            
+        // }
+        // sum()
+
+
+        const student={
+
+            name: "tom",
+            qual : "Btech",
+            sum: function () {
+              var add=2+2;
+              console.log("sum of two nos  "+add);
+              console.log(this);
+              console.log(this.name); // we can use "use strict mode here"
+
+
+                
+            }
+
+        }
+        student.sum()
+          
+        
+        </script>
+    </body>
+</html>

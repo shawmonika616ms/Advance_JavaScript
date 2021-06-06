@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        
+
+
+
+
+
+        <script type="text/JavaScript">
+        
+         const getRollNo = () => {
+
+             setTimeout(() => {
+                 console.log('API Getting roll no');
+                 let roll_no=[1,2,3,4,5];
+                 console.log(roll_no);
+
+                 setTimeout((roll) => {
+                     const biodata= {
+                         name: "tom",
+                         age : 20
+                     }
+                     console.log(`my roll no is ${roll} My name is ${biodata.name} and my age is ${biodata.age}`);
+
+                     setTimeout((name) => {
+                         biodata.gender = 'male';
+                         console.log(`my roll no is ${roll} My name is ${biodata.name} and my age is ${biodata.age} and i am ${biodata.gender}`);
+
+                         
+                     }, 2000, biodata.name);
+
+                     
+                 }, 2000,roll_no[1]);
+                 
+             }, 2000);
+         }
+         getRollNo()
+          
+        
+        </script>
+    </body>
+</html>

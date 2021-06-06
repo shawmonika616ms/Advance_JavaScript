@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        
+
+
+
+
+
+        <script type="text/JavaScript">
+        
+         const pobj1= new Promise((resolve,reject)=>{
+             setTimeout(() => {
+                 let roll_no=[1,2,3,4,5]
+                 resolve(roll_no);
+                 //reject('error while communicating')
+                 
+             }, 2000);
+         } )
+
+         const getbiodata = (indexdata) =>{
+             return new Promise ((resolve,reject) =>{
+                 setTimeout((indexdata) => {
+                     let biodata={
+                         name :'tom',
+                         age:34
+                     }
+                     resolve(`my roll is ${indexdata} my name ${biodata.name} my age ${biodata.age}`)
+                     
+                 }, 2000,indexdata);
+             })
+         }
+
+        //  pobj1.then((rollno) => {
+             
+        //  console.log(rollno);
+
+        //  return getbiodata(rollno[1])
+
+        // }).then((abc)=>{
+        //     console.log(abc);
+        // })
+         
+         
+        //  .catch((error)=>{
+
+        //  })
+
+
+
+        async function getdata() {
+            const rollnodata=await pobj1
+            console.log(rollnodata);
+
+
+           
+            const bdata=await getbiodata(rollnodata[1]);
+            console.log(bdata);
+
+            return bdata
+
+
+
+            
+        }
+        const getname=getdata().then((myname)=>{
+        console.log(myname);
+    })
+          
+        
+        </script>
+    </body>
+</html>
